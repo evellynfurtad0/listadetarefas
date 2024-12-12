@@ -30,7 +30,7 @@ namespace listadetarefas
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-            //mudar para cadastrar
+           
         }
 
         private void btEntrar_Click(object sender, EventArgs e)
@@ -39,6 +39,10 @@ namespace listadetarefas
             {
                 if (txtUsuario.Text.Equals("evellyn") && txtSenha.Text.Equals("12345"))
                  {
+                    var cadast = new cadastro(); //mudar para inicio 
+                    cadast.Show();
+
+                    this.Visible = false; //esconde o formulario
                     //ir para o inicio
                  }
                  else{
@@ -47,7 +51,7 @@ namespace listadetarefas
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
 
-                    //revisar
+                    //
                     txtUsuario.Focus();
                     txtSenha.Text = "";
                 }
@@ -59,6 +63,16 @@ namespace listadetarefas
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
+        }
+
+        private void btCadrastar_Click(object sender, EventArgs e)
+        {
+            //mudar para cadastrar
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
